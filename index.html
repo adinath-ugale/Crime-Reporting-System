@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crime Reporting System (CRS) | Report. Track. Respond.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Official Civic Topbar -->
+  <div class="official-topbar">
+    <div class="container official-topbar-inner">
+      <div class="official-topbar-left">
+        <span class="official-flag-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          National Citizen Security & Law Enforcement Portal
+        </span>
+      </div>
+      <div class="official-topbar-right">
+        <span>24x7 Emergency Helplines:</span>
+        <a href="tel:112" class="official-helpline-link">Emergency 112</a>
+        <a href="tel:100" class="official-helpline-link">Police 100</a>
+        <a href="police-login.html" style="color: #93c5fd; font-weight: 600;">Authorized Police Login &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="crs-header">
+    <div class="container crs-nav-container">
+      <a href="index.html" class="crs-brand">
+        <img src="assets/logos/crs-logo.svg" alt="CRS Emblem" class="crs-brand-img">
+      </a>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="crs-nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="report-crime.html">Report Crime</a></li>
+          <li><a href="track-complaint.html">Track Complaint</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons (Syncs with session via navigation.js) -->
+      <div class="crs-nav-actions">
+        <a href="login.html" class="btn btn-sm btn-outline">Citizen Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Unified Civic Law Enforcement Network
+            </div>
+            <h1 class="hero-title">Report Crime. Track Progress. <span>Stay Informed.</span></h1>
+            <p class="hero-description">
+              A centralized digital platform connecting citizens directly with jurisdictional police stations. 
+              File verified incident reports online, attach digital evidence, and monitor transparent, timestamped 
+              case investigations in real-time.
+            </p>
+            <div class="hero-cta-group">
+              <a href="report-crime.html" class="btn btn-lg btn-danger">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                Report a Crime
+              </a>
+              <a href="track-complaint.html" class="btn btn-lg btn-outline" style="border-color: rgba(255,255,255,0.4); color: #ffffff;">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/></svg>
+                Track Complaint
+              </a>
+            </div>
+            <div class="hero-trust-indicators">
+              <div class="trust-item">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Official Police Jurisdiction
+              </div>
+              <div class="trust-item">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+                Digitally Timestamped Evidence
+              </div>
+              <div class="trust-item">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+                Instant Status Notifications
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual-card">
+            <img src="assets/images/hero-civic-security.svg" alt="Central Civic Dispatch & Monitoring" style="width: 100%; display: block;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Contacts Quick Strip -->
+    <section class="emergency-strip">
+      <div class="container emergency-strip-inner">
+        <div class="emergency-title-box">
+          <div class="emergency-icon-pulse">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-navy" style="font-size: 0.95rem;">Immediate Emergency Assistance</h4>
+            <p class="text-muted" style="font-size: 0.8rem;">If you are in immediate physical danger, dial official dispatch numbers directly.</p>
+          </div>
+        </div>
+        <div class="emergency-numbers-grid">
+          <a href="tel:112" class="emergency-dial-pill police">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            National Emergency: 112
+          </a>
+          <a href="tel:100" class="emergency-dial-pill police">Police: 100</a>
+          <a href="tel:108" class="emergency-dial-pill ambulance">Ambulance: 108</a>
+          <a href="tel:101" class="emergency-dial-pill fire">Fire: 101</a>
+          <a href="tel:1090" class="emergency-dial-pill" style="border-color: #e9d5ff; background: #faf5ff; color: #7c3aed;">Women Helpline: 1090</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Actions Section -->
+    <section class="py-16">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Quick Actions</span>
+          <h2 class="section-title">Central Citizen Services</h2>
+          <p class="section-subtitle">Access core services directly to lodge incidents, track progress, or access historical records.</p>
+        </div>
+        <div class="quick-actions-grid">
+          <a href="report-crime.html" class="action-card emergency">
+            <div class="action-card-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            </div>
+            <h3 class="action-card-title">Report a Crime</h3>
+            <p class="action-card-desc">Submit formal incident reports with crime classification, suspect notes, and digital evidence.</p>
+            <span class="action-card-link">File Report &rarr;</span>
+          </a>
+
+          <a href="track-complaint.html" class="action-card track">
+            <div class="action-card-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/></svg>
+            </div>
+            <h3 class="action-card-title">Track Complaint</h3>
+            <p class="action-card-desc">Enter your unique complaint identifier to monitor real-time investigation stages.</p>
+            <span class="action-card-link">Search Status &rarr;</span>
+          </a>
+
+          <a href="complaint-history.html" class="action-card">
+            <div class="action-card-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            </div>
+            <h3 class="action-card-title">Complaint History</h3>
+            <p class="action-card-desc">Review your past registered grievances, downloadable FIR summaries, and resolution notices.</p>
+            <span class="action-card-link">View History &rarr;</span>
+          </a>
+
+          <a href="police-login.html" class="action-card police">
+            <div class="action-card-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="action-card-title">Police Department</h3>
+            <p class="action-card-desc">Authorized personnel portal for station in-charges, investigating officers, and officials.</p>
+            <span class="action-card-link">Department Login &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (Workflow Steps) -->
+    <section class="workflow-section py-16">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Standard Operating Procedure</span>
+          <h2 class="section-title">How Complaint Processing Works</h2>
+          <p class="section-subtitle">A transparent 5-step operational protocol from citizen submission to case resolution.</p>
+        </div>
+        <div class="workflow-steps">
+          <div class="workflow-step-card">
+            <div class="step-number-badge">1</div>
+            <h4 class="step-card-title">Register Identity</h4>
+            <p class="step-card-desc">Citizens authenticate with mobile & address credentials to ensure authentic complaints.</p>
+          </div>
+          <div class="workflow-step-card">
+            <div class="step-number-badge">2</div>
+            <h4 class="step-card-title">Submit Complaint</h4>
+            <p class="step-card-desc">Fill structured particulars, date, location, suspect description, and attach evidence.</p>
+          </div>
+          <div class="workflow-step-card">
+            <div class="step-number-badge">3</div>
+            <h4 class="step-card-title">Station Verification</h4>
+            <p class="step-card-desc">Jurisdictional station verifies report validity and confirms jurisdictional alignment.</p>
+          </div>
+          <div class="workflow-step-card">
+            <div class="step-number-badge">4</div>
+            <h4 class="step-card-title">Active Investigation</h4>
+            <p class="step-card-desc">An assigned officer logs field inquiries, evidence forensics, and case diary updates.</p>
+          </div>
+          <div class="workflow-step-card">
+            <div class="step-number-badge">5</div>
+            <h4 class="step-card-title">Resolution & Close</h4>
+            <p class="step-card-desc">Official closure report generated with citizen notification and permanent audit record.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">System Capabilities</span>
+          <h2 class="section-title">Built For Public Safety & Governance</h2>
+          <p class="section-subtitle">Modern technology standardizing law enforcement response and citizen empowerment.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-box-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <h3 class="feature-box-title">Secure Registration</h3>
+            <p class="feature-box-desc">Structured verification eliminates spam complaints while safeguarding citizen personal details.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <h3 class="feature-box-title">Complaint Tracking</h3>
+            <p class="feature-box-desc">Transparent lifecycle monitoring prevents arbitrary case delays and ensures supervisory oversight.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+            </div>
+            <h3 class="feature-box-title">Status Updates</h3>
+            <p class="feature-box-desc">Automatic alerts keep complainants updated when officers are assigned or action is logged.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <h3 class="feature-box-title">Station Management</h3>
+            <p class="feature-box-desc">Central police station registry with jurisdiction codes, contact lines, and commanding officers.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <h3 class="feature-box-title">Police Management</h3>
+            <p class="feature-box-desc">Assign and reassign officers based on specialty, workload balancing, and district coverage.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="feature-box-title">Transparent Case Progress</h3>
+            <p class="feature-box-desc">Timestamped investigation diary provides accountability and legal compliance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety & Legal Notice -->
+    <section class="container pb-16">
+      <div class="safety-banner">
+        <div class="safety-banner-inner">
+          <div class="safety-banner-content">
+            <h4>Legal Notice on False Reporting</h4>
+            <p>
+              Filing a false report or furnishing intentionally misleading statements is a punishable offence under 
+              Sections 182 and 211 of the Indian Penal Code (IPC), attracting strict legal prosecution. Please ensure 
+              all lodged particulars are verified and authentic.
+            </p>
+          </div>
+          <div>
+            <a href="terms.html" class="btn btn-outline" style="border-color: var(--color-slate-muted);">Read Guidelines</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="crs-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <img src="assets/logos/crs-logo.svg" alt="CRS Emblem" style="height: 44px; filter: brightness(0) invert(1);">
+          <p>
+            The Crime Reporting System (CRS) is a unified law enforcement and civic technology portal enabling 
+            citizens to lodge electronic complaints, track investigations, and maintain safe communities.
+          </p>
+          <span style="font-size: 0.75rem; color: #94a3b8;">Civic Jurisdiction: State Police Headquarters</span>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Citizen Services</h4>
+          <ul class="footer-links">
+            <li><a href="report-crime.html">Report Crime</a></li>
+            <li><a href="track-complaint.html">Track Complaint</a></li>
+            <li><a href="complaint-history.html">Complaint History</a></li>
+            <li><a href="login.html">Citizen Login</a></li>
+            <li><a href="register.html">Citizen Registration</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Police Department</h4>
+          <ul class="footer-links">
+            <li><a href="police-login.html">Department Login</a></li>
+            <li><a href="police-dashboard.html">Police Dashboard</a></li>
+            <li><a href="police-stations.html">Station Directory</a></li>
+            <li><a href="complaints-management.html">Case Management</a></li>
+            <li><a href="reports.html">Official Reports</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-emergency-box">
+            <h5>Emergency Dispatch</h5>
+            <p style="font-size: 0.8rem; color: #cbd5e1; margin-bottom: 0.75rem;">For life-threatening emergencies, do not wait for online ticket response.</p>
+            <div style="font-size: 1.1rem; font-weight: 800; color: #ffffff;">Dial 112 / 100</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Crime Reporting System (CRS). All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact Support</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Document Not Found | Crime Reporting System (CRS)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body style="background-color: var(--color-bg-light); min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Header -->
+  <header class="crs-header">
+    <div class="container crs-nav-container">
+      <a href="index.html" class="crs-brand">
+        <img src="assets/logos/crs-logo.svg" alt="CRS Emblem" class="crs-brand-img">
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="btn btn-sm btn-outline">Portal Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-16" style="flex: 1; display: flex; align-items: center;">
+    <div class="container" style="max-width: 560px;">
+      <div class="card card-elevated text-center py-12 px-6">
+        <div class="emergency-icon-pulse" style="width: 64px; height: 64px; margin: 0 auto 1.5rem; background: var(--color-bg-subtle); color: var(--color-navy);">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        </div>
+        <span class="badge badge-danger mb-2">Error 404 • Resource Not Located</span>
+        <h1 class="font-bold text-navy mb-2" style="font-size: 2rem;">Page Not Found</h1>
+        <p class="text-muted font-size-sm mb-6" style="line-height: 1.6;">
+          The requested docket, URL address, or electronic portal page could not be located in the 
+          central system registry. It may have been moved, archived, or entered incorrectly.
+        </p>
+        <div class="flex justify-center gap-3 flex-wrap">
+          <a href="index.html" class="btn btn-primary">Return to Portal Home</a>
+          <a href="track-complaint.html" class="btn btn-outline">Track a Case</a>
+          <a href="contact.html" class="btn btn-outline">Contact Desk</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="crs-footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Crime Reporting System (CRS). All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

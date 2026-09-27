@@ -1,0 +1,472 @@
+/* ==========================================================================
+   CRIME REPORTING SYSTEM (CRS) - DASHBOARD LAYOUT & DATA VISUALIZATION
+   ========================================================================== */
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-bg-light);
+}
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+.dashboard-sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--color-navy);
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 105;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform var(--transition-normal);
+}
+
+.sidebar-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.sidebar-brand-title {
+  color: var(--color-white);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-brand-subtitle {
+  display: block;
+  font-size: 0.65rem;
+  color: #60a5fa;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.sidebar-user-card {
+  padding: 1rem 1.5rem;
+  margin: 1rem 1rem 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sidebar-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+}
+
+.sidebar-user-info {
+  overflow: hidden;
+}
+
+.sidebar-user-name {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-user-role {
+  font-size: var(--font-size-xs);
+  color: #94a3b8;
+  text-transform: capitalize;
+}
+
+.sidebar-nav {
+  padding: 1rem 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar-section-label {
+  padding: 0.75rem 1.5rem 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #64748b;
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  color: #cbd5e1;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sidebar-link svg {
+  color: #94a3b8;
+  transition: color var(--transition-fast);
+}
+
+.sidebar-link:hover {
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-link:hover svg {
+  color: var(--color-white);
+}
+
+.sidebar-link.active {
+  color: var(--color-white);
+  background: linear-gradient(90deg, rgba(29, 78, 216, 0.25) 0%, transparent 100%);
+  border-left-color: var(--color-primary);
+  font-weight: 600;
+}
+
+.sidebar-link.active svg {
+  color: #60a5fa;
+}
+
+.sidebar-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   DASHBOARD MAIN CONTAINER
+   ========================================================================== */
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.dashboard-topbar {
+  height: var(--header-height);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.dashboard-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sidebar-toggle-btn {
+  display: none;
+  background: none;
+  border: 1px solid var(--color-border);
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  color: var(--color-navy);
+}
+
+.topbar-portal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.dashboard-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.notification-btn {
+  position: relative;
+  background: none;
+  border: 1px solid var(--color-border);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-slate);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.notification-btn:hover {
+  background-color: var(--color-bg-subtle);
+  color: var(--color-navy);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  background-color: var(--color-emergency);
+  color: var(--color-white);
+  font-size: 0.65rem;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border: 2px solid var(--color-white);
+}
+
+.dashboard-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+.dashboard-page-header {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-page-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-navy);
+  letter-spacing: -0.5px;
+}
+
+.dashboard-page-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-slate-muted);
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   KPI METRICS ROW
+   ========================================================================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   PURE CSS / SVG DATA VISUALIZATIONS (NO EXTERNAL CHARTS)
+   ========================================================================== */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.chart-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+/* Pure CSS Bar Chart */
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 220px;
+  padding-top: 2rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.bar-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar-fill-wrapper {
+  width: 100%;
+  max-width: 44px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bar-fill {
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(180deg, var(--color-primary) 0%, #1e40af 100%);
+  position: relative;
+  transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 4px;
+}
+
+.bar-fill.bar-warning {
+  background: linear-gradient(180deg, #f59e0b 0%, #d97706 100%);
+}
+.bar-fill.bar-success {
+  background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+}
+.bar-fill.bar-danger {
+  background: linear-gradient(180deg, #ef4444 0%, #dc2626 100%);
+}
+
+.bar-tooltip {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-slate);
+}
+
+.bar-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-slate-muted);
+  margin-top: 0.5rem;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* Horizontal Progress Bars (Status breakdown) */
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+.progress-track {
+  height: 8px;
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  transition: width 0.6s ease;
+}
+
+.progress-fill.fill-warning { background-color: var(--color-warning); }
+.progress-fill.fill-success { background-color: var(--color-success); }
+.progress-fill.fill-danger { background-color: var(--color-emergency); }
+.progress-fill.fill-purple { background-color: var(--color-purple); }
+
+/* SVG Donut Chart */
+.donut-chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-slate);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+}

@@ -1,0 +1,370 @@
+/* ==========================================================================
+   CRIME REPORTING SYSTEM (CRS) - FORM CONTROLS & VALIDATION
+   ========================================================================== */
+
+.form-group {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0.4rem;
+}
+
+.form-label.required::after {
+  content: " *";
+  color: var(--color-emergency);
+  font-weight: bold;
+}
+
+.form-control,
+.form-select,
+.form-textarea {
+  display: block;
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--color-navy);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary);
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
+}
+
+.form-control::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-slate-light);
+}
+
+.form-control:disabled,
+.form-select:disabled,
+.form-textarea:disabled {
+  background-color: var(--color-bg-subtle);
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.form-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* ==========================================================================
+   INPUT GROUPS & PASSWORD TOGGLE
+   ========================================================================== */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0.625rem 0.875rem;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-slate-muted);
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-right: none;
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+}
+
+.input-group .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-wrapper .form-control {
+  padding-right: 2.75rem;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--color-slate-muted);
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.password-toggle-btn:hover {
+  color: var(--color-navy);
+}
+
+/* ==========================================================================
+   VALIDATION STATES & ERROR MESSAGES
+   ========================================================================== */
+.form-control.is-invalid,
+.form-select.is-invalid,
+.form-textarea.is-invalid {
+  border-color: var(--color-emergency) !important;
+  background-color: #fffafb;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.1);
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+  border-color: var(--color-success);
+}
+
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.35rem;
+  font-size: var(--font-size-xs);
+  color: var(--color-emergency);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.is-invalid ~ .invalid-feedback,
+.is-invalid + .invalid-feedback {
+  display: flex;
+}
+
+.form-hint {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: var(--font-size-xs);
+  color: var(--color-slate-muted);
+}
+
+/* ==========================================================================
+   CHECKBOXES & RADIOS
+   ========================================================================== */
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+}
+
+.form-check-input {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.15rem;
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  cursor: pointer;
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.form-check-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-slate);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ==========================================================================
+   FILE UPLOAD DROPZONE
+   ========================================================================== */
+.file-upload-zone {
+  border: 2px dashed var(--color-border-dark);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background-color: var(--color-bg-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.file-upload-zone:hover,
+.file-upload-zone.dragover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.file-upload-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 0.75rem;
+  color: var(--color-primary);
+}
+
+.file-upload-text {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.file-upload-subtext {
+  font-size: var(--font-size-xs);
+  color: var(--color-slate-muted);
+  margin-top: 0.25rem;
+}
+
+.file-preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.file-preview-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.file-name {
+  font-weight: 600;
+  color: var(--color-navy);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+
+.file-size {
+  color: var(--color-slate-muted);
+}
+
+.file-remove-btn {
+  background: none;
+  border: none;
+  color: var(--color-emergency);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+/* ==========================================================================
+   MULTI-STEP FORM NAVIGATION
+   ========================================================================== */
+.stepper-header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.stepper-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-slate-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stepper-nav-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-subtle);
+  border: 2px solid var(--color-border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+}
+
+.stepper-nav-item.active {
+  color: var(--color-primary);
+}
+.stepper-nav-item.active .stepper-nav-circle {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.stepper-nav-item.completed {
+  color: var(--color-navy);
+}
+.stepper-nav-item.completed .stepper-nav-circle {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: var(--color-white);
+}
+
+.step-pane {
+  display: none;
+  animation: fadeIn 0.25s ease;
+}
+
+.step-pane.active {
+  display: block;
+}
+
+.step-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   SEARCH BAR
+   ========================================================================== */
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+}
+
+.search-input-wrapper input {
+  padding-left: 2.25rem;
+}
+
+.search-input-wrapper svg {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-slate-light);
+  pointer-events: none;
+}

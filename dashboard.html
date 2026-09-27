@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citizen Dashboard | Crime Reporting System (CRS)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-brand">
+          <img src="assets/logos/crs-logo.svg" alt="CRS Emblem" style="height: 38px; filter: brightness(0) invert(1);">
+        </a>
+      </div>
+
+      <!-- User Card -->
+      <div class="sidebar-user-card">
+        <div class="sidebar-user-avatar">C</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name user-display-name">Citizen User</div>
+          <div class="sidebar-user-role user-display-role">Citizen Account</div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="sidebar-nav">
+        <div class="sidebar-section-label">Citizen Services</div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="dashboard.html" class="sidebar-link active">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                Dashboard
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="report-crime.html" class="sidebar-link">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                Report Crime
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="complaint-history.html" class="sidebar-link">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                My Complaints
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="track-complaint.html" class="sidebar-link">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/></svg>
+                Track Complaint
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-section-label">Account</div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="notifications.html" class="sidebar-link">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+                Notifications
+              </span>
+              <span class="notification-badge" style="position: static; display: none;">0</span>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="sidebar-link">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                Profile
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button type="button" class="btn btn-sm btn-outline logout-btn btn-block" style="border-color: rgba(255,255,255,0.2); color: #cbd5e1;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+          Sign Out
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <div class="dashboard-main">
+      <!-- Topbar -->
+      <div class="dashboard-topbar">
+        <div class="dashboard-topbar-left">
+          <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+          <span class="topbar-portal-badge badge-role-citizen">Citizen Self-Service Portal</span>
+        </div>
+        <div class="dashboard-topbar-right">
+          <a href="notifications.html" class="notification-btn" title="View Notifications">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+            <span class="notification-badge" style="display: none;">0</span>
+          </a>
+          <a href="profile.html" class="flex items-center gap-2" style="text-decoration: none; color: inherit;">
+            <div class="sidebar-user-avatar" style="width: 36px; height: 36px;">C</div>
+            <span class="font-bold font-size-sm user-display-name">Citizen</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dashboard Content -->
+      <div class="dashboard-content">
+        <div class="dashboard-page-header">
+          <div>
+            <h1 class="dashboard-page-title">Citizen Workspace</h1>
+            <p class="dashboard-page-subtitle">Welcome back, <span class="user-display-name font-bold">Citizen</span>. Review your complaint portfolio and registered incidents.</p>
+          </div>
+          <div class="flex gap-2">
+            <a href="report-crime.html" class="btn btn-danger">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+              Report New Crime
+            </a>
+          </div>
+        </div>
+
+        <!-- Metric KPI Cards (Calculated dynamically from LocalStorage) -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-content">
+              <span class="stat-label">Total Filed Complaints</span>
+              <span class="stat-value" id="citizenTotalComplaints">0</span>
+              <span class="stat-meta">In official state repository</span>
+            </div>
+            <div class="stat-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+          </div>
+
+          <div class="stat-card stat-warning">
+            <div class="stat-content">
+              <span class="stat-label">Submitted / Pending</span>
+              <span class="stat-value" id="citizenSubmittedComplaints">0</span>
+              <span class="stat-meta text-warning">Awaiting station verification</span>
+            </div>
+            <div class="stat-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
+            </div>
+          </div>
+
+          <div class="stat-card stat-purple">
+            <div class="stat-content">
+              <span class="stat-label">Under Investigation</span>
+              <span class="stat-value" id="citizenInvestigationComplaints">0</span>
+              <span class="stat-meta" style="color: var(--color-purple);">Active inquiry by officers</span>
+            </div>
+            <div class="stat-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+          </div>
+
+          <div class="stat-card stat-success">
+            <div class="stat-content">
+              <span class="stat-label">Resolved / Closed</span>
+              <span class="stat-value" id="citizenResolvedComplaints">0</span>
+              <span class="stat-meta text-success">Closure report filed</span>
+            </div>
+            <div class="stat-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Grid: Recent Complaints + Profile/Quick Actions -->
+        <div class="grid grid-cols-3 gap-6">
+          <div class="card" style="grid-column: span 2;">
+            <div class="card-header">
+              <h3 class="card-title">Recent Complaint Submissions</h3>
+              <a href="complaint-history.html" class="btn btn-sm btn-outline">View All History &rarr;</a>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <div class="table-responsive">
+                <table class="crs-table">
+                  <thead>
+                    <tr>
+                      <th>Complaint ID</th>
+                      <th>Crime Category</th>
+                      <th>Incident Date</th>
+                      <th>Jurisdiction Station</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="citizenRecentComplaintsBody">
+                    <tr>
+                      <td colspan="6" class="text-center py-6 text-muted">Loading your complaints...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Profile Summary & Emergency Quick Dial -->
+          <div class="flex flex-col gap-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Citizen Profile</h4>
+              </div>
+              <div class="card-body" id="citizenProfileWidget">
+                <!-- Injected by Dashboards.initCitizenDashboard() -->
+              </div>
+            </div>
+
+            <!-- Quick Service Actions -->
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Quick Actions</h4>
+              </div>
+              <div class="card-body flex flex-col gap-2">
+                <a href="report-crime.html" class="btn btn-outline-danger justify-between">
+                  <span>Lodge Incident Report</span>
+                  <span>&rarr;</span>
+                </a>
+                <a href="track-complaint.html" class="btn btn-outline-primary justify-between">
+                  <span>Check Live Tracking</span>
+                  <span>&rarr;</span>
+                </a>
+                <a href="contact.html" class="btn btn-outline justify-between">
+                  <span>Contact Station Desk</span>
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/dashboard.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Dashboards.initCitizenDashboard();
+    });
+  </script>
+</body>
+</html>

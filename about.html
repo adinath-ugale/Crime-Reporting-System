@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About CRS | Crime Reporting System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body style="background-color: var(--color-bg-light);">
+
+  <!-- Official Topbar -->
+  <div class="official-topbar">
+    <div class="container official-topbar-inner">
+      <div class="official-topbar-left">
+        <span class="official-flag-badge">National Citizen Law Enforcement Network • System Governance</span>
+      </div>
+      <div class="official-topbar-right">
+        <a href="police-login.html" style="color: #60a5fa; font-weight: 600;">Authorized Police Login &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="crs-header">
+    <div class="container crs-nav-container">
+      <a href="index.html" class="crs-brand">
+        <img src="assets/logos/crs-logo.svg" alt="CRS Emblem" class="crs-brand-img">
+      </a>
+      <nav>
+        <ul class="crs-nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report-crime.html">Report Crime</a></li>
+          <li><a href="track-complaint.html">Track Complaint</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="crs-nav-actions">
+        <a href="login.html" class="btn btn-sm btn-outline">Citizen Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="py-16">
+    <div class="container">
+      <div class="text-center mb-16">
+        <span class="section-tag">Public Safety Mission</span>
+        <h1 class="section-title">About the Crime Reporting System</h1>
+        <p class="section-subtitle">
+          Bridging the communication gap between citizens and law enforcement agencies through 
+          transparent digital grievance redressal, real-time investigation auditing, and accountable civic governance.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h2 class="font-bold text-navy mb-4" style="font-size: 1.75rem;">Transforming Public Grievance Redressal</h2>
+          <p class="text-slate mb-4" style="line-height: 1.8;">
+            The Crime Reporting System (CRS) is designed as a centralized digital infrastructure connecting citizens 
+            directly with jurisdictional police stations, station in-charges, and state law enforcement supervisory commands.
+          </p>
+          <p class="text-slate mb-4" style="line-height: 1.8;">
+            By standardizing electronic complaint lodging, cataloging digital evidence metadata, and maintaining immutable 
+            case diaries with chronological timestamps, CRS ensures that every registered report receives appropriate legal attention 
+            without geographical hurdles or procedural opacity.
+          </p>
+          <div class="flex gap-4 mt-6">
+            <a href="report-crime.html" class="btn btn-danger">Lodge a Complaint</a>
+            <a href="track-complaint.html" class="btn btn-outline">Track Existing Case</a>
+          </div>
+        </div>
+        <div class="card card-elevated" style="padding: 2.5rem; background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);">
+          <h3 class="font-bold text-navy mb-4">Core Operating Principles</h3>
+          <div class="flex flex-col gap-4">
+            <div class="flex items-start gap-3">
+              <div class="stat-icon" style="width: 36px; height: 36px; border-radius: var(--radius-full); font-weight: bold;">1</div>
+              <div>
+                <h5 class="font-bold text-navy">Accountability & Audit Trails</h5>
+                <p class="text-muted font-size-xs">Every status modification, officer assignment, and diary log is timestamped with authorized officer credentials.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="stat-icon" style="width: 36px; height: 36px; border-radius: var(--radius-full); font-weight: bold;">2</div>
+              <div>
+                <h5 class="font-bold text-navy">Jurisdictional Intelligence</h5>
+                <p class="text-muted font-size-xs">Complaints are mapped directly to territorial police stations with Zero FIR transfer support across borders.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="stat-icon" style="width: 36px; height: 36px; border-radius: var(--radius-full); font-weight: bold;">3</div>
+              <div>
+                <h5 class="font-bold text-navy">Digital Evidence Preservation</h5>
+                <p class="text-muted font-size-xs">Secure client-side metadata recording ensures evidentiary chain of custody from filing to judicial inquiry.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics Banner -->
+      <div class="card mb-16" style="background: var(--color-navy); color: #ffffff; padding: 2rem;">
+        <div class="grid grid-cols-4 gap-6 text-center">
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: #60a5fa; font-family: var(--font-family-mono);">100%</div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; margin-top: 0.25rem;">Electronic Case Auditing</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: #34d399; font-family: var(--font-family-mono);">&lt; 24h</div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; margin-top: 0.25rem;">Initial Station Verification</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: #fbbf24; font-family: var(--font-family-mono);">24x7</div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; margin-top: 0.25rem;">Citizen Portal Availability</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: #f87171; font-family: var(--font-family-mono);">Zero</div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; margin-top: 0.25rem;">Jurisdictional Refusal (Zero FIR)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="crs-footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Crime Reporting System (CRS). All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

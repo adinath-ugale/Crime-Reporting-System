@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Emergency Support | Crime Reporting System (CRS)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body style="background-color: var(--color-bg-light);">
+
+  <!-- Official Topbar -->
+  <div class="official-topbar">
+    <div class="container official-topbar-inner">
+      <div class="official-topbar-left">
+        <span class="official-flag-badge">National Citizen Law Enforcement Network • Support Directory</span>
+      </div>
+      <div class="official-topbar-right">
+        <span>Emergency Dispatch:</span>
+        <a href="tel:112" class="official-helpline-link">Dial 112</a>
+        <a href="police-login.html" style="color: #60a5fa; font-weight: 600;">Police Login &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="crs-header">
+    <div class="container crs-nav-container">
+      <a href="index.html" class="crs-brand">
+        <img src="assets/logos/crs-logo.svg" alt="CRS Emblem" class="crs-brand-img">
+      </a>
+      <nav>
+        <ul class="crs-nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report-crime.html">Report Crime</a></li>
+          <li><a href="track-complaint.html">Track Complaint</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="crs-nav-actions">
+        <a href="login.html" class="btn btn-sm btn-outline">Citizen Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="py-12">
+    <div class="container">
+      <div class="text-center mb-12">
+        <span class="section-tag">24x7 Citizen Assistance</span>
+        <h1 class="section-title">Contact Support & Helplines</h1>
+        <p class="section-subtitle">
+          Connect with central police control rooms, district desk in-charges, or submit general inquiries.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 mb-12">
+        <!-- Contact Form -->
+        <div class="card card-elevated">
+          <div class="card-header">
+            <h3 class="card-title">Send a Formal Inquiry</h3>
+          </div>
+          <div class="card-body">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="contactName" class="form-label required">Your Full Name</label>
+                <input type="text" id="contactName" class="form-control" placeholder="e.g. Anjali Nair" required>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label required">Email Address</label>
+                  <input type="email" id="contactEmail" class="form-control" placeholder="name@example.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactPhone" class="form-label required">Phone Number</label>
+                  <input type="tel" id="contactPhone" class="form-control" placeholder="10-digit mobile" maxlength="10" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label required">Inquiry Subject</label>
+                <input type="text" id="contactSubject" class="form-control" placeholder="e.g. Police Station Jurisdiction Boundary Query" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label required">Detailed Message</label>
+                <textarea id="contactMessage" class="form-textarea" placeholder="Enter your inquiry details. Do not use this form for urgent crime incidents..." required></textarea>
+              </div>
+
+              <button type="submit" id="contactSubmitBtn" class="btn btn-primary btn-block">
+                Transmit Message to Support Desk
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Emergency Directory & HQ Information -->
+        <div class="flex flex-col gap-6">
+          <div class="card" style="border-left: 4px solid var(--color-emergency);">
+            <div class="card-header">
+              <h4 class="card-title text-emergency">Critical Helplines</h4>
+            </div>
+            <div class="card-body" style="font-size: 0.9rem; line-height: 2;">
+              <div class="flex items-center justify-between">
+                <span>National Emergency Response System (NERS)</span>
+                <a href="tel:112" class="font-bold text-emergency">112</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Police Central Dispatch</span>
+                <a href="tel:100" class="font-bold text-emergency">100</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Ambulance Services</span>
+                <a href="tel:108" class="font-bold">108</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Fire Rescue</span>
+                <a href="tel:101" class="font-bold">101</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Women Safety Helpline</span>
+                <a href="tel:1090" class="font-bold" style="color: #7c3aed;">1090</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Cyber Crime National Helpline</span>
+                <a href="tel:1930" class="font-bold text-primary">1930</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">State Police Headquarters</h4>
+            </div>
+            <div class="card-body" style="font-size: 0.85rem; line-height: 1.8;">
+              <p><strong>Address:</strong> Police Bhavan, Government Civic Enclave, Metro City, Maharashtra - 400001</p>
+              <p><strong>Control Room Phone:</strong> 022-22620111 / 022-22620222</p>
+              <p><strong>Official Inquiries:</strong> info@crs.gov.in</p>
+              <p><strong>Grievance Redressal:</strong> nodal.officer@crs.gov.in</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="crs-footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Crime Reporting System (CRS). All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        Validator.clearAllErrors(form);
+
+        const name = document.getElementById('contactName');
+        const email = document.getElementById('contactEmail');
+        const phone = document.getElementById('contactPhone');
+        const subject = document.getElementById('contactSubject');
+        const message = document.getElementById('contactMessage');
+
+        let isValid = true;
+        if (!Validator.isRequired(name.value)) {
+          Validator.showError(name, 'Name is required.');
+          isValid = false;
+        }
+        if (!Validator.isValidEmail(email.value)) {
+          Validator.showError(email, 'Valid email required.');
+          isValid = false;
+        }
+        if (!Validator.isValidMobile(phone.value)) {
+          Validator.showError(phone, 'Valid 10-digit mobile number required.');
+          isValid = false;
+        }
+        if (!Validator.isRequired(subject.value)) {
+          Validator.showError(subject, 'Subject is required.');
+          isValid = false;
+        }
+        if (!Validator.isRequired(message.value)) {
+          Validator.showError(message, 'Message is required.');
+          isValid = false;
+        }
+
+        if (!isValid) return;
+
+        const btn = document.getElementById('contactSubmitBtn');
+        btn.disabled = true;
+        btn.textContent = 'Transmitting Message...';
+
+        const res = await ApiService.apiSaveContact({
+          name: name.value.trim(),
+          email: email.value.trim(),
+          phone: phone.value.trim(),
+          subject: subject.value.trim(),
+          message: message.value.trim()
+        });
+
+        if (res.success) {
+          App.showToast('Message Received', 'Your inquiry has been logged in the support repository. Reference ID: ' + res.data.id, 'success');
+          form.reset();
+        } else {
+          App.showToast('Error', 'Unable to submit message.', 'error');
+        }
+
+        btn.disabled = false;
+        btn.textContent = 'Transmit Message to Support Desk';
+      });
+    });
+  </script>
+</body>
+</html>

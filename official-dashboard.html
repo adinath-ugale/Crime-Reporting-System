@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Headquarters Executive Dashboard | Crime Reporting System (CRS)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="dashboard-layout">
+    <!-- Official Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-brand">
+          <img src="assets/logos/crs-logo.svg" alt="CRS Emblem" style="height: 38px; filter: brightness(0) invert(1);">
+        </a>
+      </div>
+
+      <div class="sidebar-user-card" style="background: rgba(220, 38, 38, 0.2); border-color: rgba(248, 113, 113, 0.3);">
+        <div class="sidebar-user-avatar" style="background: #dc2626;">HQ</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name user-display-name">Director General</div>
+          <div class="sidebar-user-role user-display-role">State Headquarters</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-section-label">State Headquarters</div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="official-dashboard.html" class="sidebar-link active">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                State Analytics
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="complaints-management.html" class="sidebar-link">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                All Complaints
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="police-stations.html" class="sidebar-link">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                Stations Network
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="officer-management.html" class="sidebar-link">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                State Officers
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="reports.html" class="sidebar-link">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                Executive Reports
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="notifications.html" class="sidebar-link">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+                Notifications
+              </span>
+              <span class="notification-badge" style="position: static; display: none;">0</span>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="sidebar-link">
+              <span class="sidebar-link-content">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                Profile
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button type="button" class="btn btn-sm btn-outline logout-btn btn-block" style="border-color: rgba(255,255,255,0.2); color: #cbd5e1;">
+          Sign Out
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <div class="dashboard-main">
+      <div class="dashboard-topbar">
+        <div class="dashboard-topbar-left">
+          <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+          <span class="topbar-portal-badge badge-role-official">State Police Headquarters Command</span>
+        </div>
+        <div class="dashboard-topbar-right">
+          <a href="reports.html" class="btn btn-sm btn-outline-primary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Export CSV Reports
+          </a>
+        </div>
+      </div>
+
+      <div class="dashboard-content">
+        <div class="dashboard-page-header">
+          <div>
+            <h1 class="dashboard-page-title">Statewide Crime & Governance Analytics</h1>
+            <p class="dashboard-page-subtitle">Executive oversight across all districts, jurisdiction police stations, and caseload clearance.</p>
+          </div>
+        </div>
+
+        <!-- 5 KPI Cards -->
+        <div class="stats-grid" style="grid-template-columns: repeat(5, 1fr);">
+          <div class="stat-card">
+            <div class="stat-content">
+              <span class="stat-label">Total Registered</span>
+              <span class="stat-value" id="officialTotalComplaints">0</span>
+              <span class="stat-meta">Statewide cases</span>
+            </div>
+          </div>
+
+          <div class="stat-card stat-purple">
+            <div class="stat-content">
+              <span class="stat-label">Active Stations</span>
+              <span class="stat-value" id="officialTotalStations">0</span>
+              <span class="stat-meta" style="color: var(--color-purple);">Connected network</span>
+            </div>
+          </div>
+
+          <div class="stat-card stat-warning">
+            <div class="stat-content">
+              <span class="stat-label">Pending Cases</span>
+              <span class="stat-value" id="officialPending">0</span>
+              <span class="stat-meta text-warning">Awaiting action</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-content">
+              <span class="stat-label">In Investigation</span>
+              <span class="stat-value" id="officialInvestigation">0</span>
+              <span class="stat-meta">Under inquiry</span>
+            </div>
+          </div>
+
+          <div class="stat-card stat-success">
+            <div class="stat-content">
+              <span class="stat-label">Resolved / Closed</span>
+              <span class="stat-value" id="officialResolved">0</span>
+              <span class="stat-meta text-success">Cleared cases</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Analytics Charts Grid (Pure CSS & SVG, No external libraries) -->
+        <div class="charts-grid">
+          <!-- Crime Category Distribution Bar Chart -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <div>
+                <h3 class="chart-title">Crime Incidents by Category</h3>
+                <span class="text-muted font-size-xs">Real-time classification from LocalStorage database</span>
+              </div>
+              <span class="badge badge-submitted">Live Distribution</span>
+            </div>
+            <div class="bar-chart" id="categoryBarChart">
+              <!-- Rendered via Dashboards.renderCategoryBarChart() -->
+            </div>
+          </div>
+
+          <!-- Status Progression Horizontal Progress Bars -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <div>
+                <h3 class="chart-title">Case Clearance Status</h3>
+                <span class="text-muted font-size-xs">Clearance velocity by stage</span>
+              </div>
+            </div>
+            <div class="progress-list" id="statusProgressContainer" style="padding-top: 1rem;">
+              <!-- Rendered via Dashboards.renderStatusProgressBars() -->
+            </div>
+          </div>
+        </div>
+
+        <!-- District Ranking -->
+        <div class="card card-elevated">
+          <div class="card-header">
+            <h3 class="card-title">Caseload by District Jurisdiction</h3>
+            <a href="reports.html" class="btn btn-sm btn-outline">Generate Tabular Audit &rarr;</a>
+          </div>
+          <div class="card-body" id="districtDistributionList">
+            <!-- Rendered via Dashboards.renderDistrictDistribution() -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/dashboard.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Dashboards.initOfficialDashboard();
+    });
+  </script>
+</body>
+</html>

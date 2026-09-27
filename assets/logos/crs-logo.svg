@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+  <!-- Shield Icon -->
+  <g transform="translate(10, 10)">
+    <path d="M30 2 L54 12 C54 36 42 52 30 58 C18 52 6 36 6 12 Z" fill="url(#shieldGrad)" stroke="#3b82f6" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Inner Emblem: Scale of Justice & Star -->
+    <path d="M30 14 L30 44 M20 22 L40 22 M16 32 L24 32 L20 22 Z M36 32 L44 32 L40 22 Z" stroke="url(#goldGrad)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="18" r="2.5" fill="#f59e0b"/>
+    <path d="M30 46 L24 50 L36 50 Z" fill="#60a5fa"/>
+  </g>
+  <!-- Text Brand -->
+  <text x="80" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" font-weight="800" fill="#0f172a" letter-spacing="1">CRS</text>
+  <text x="80" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#2563eb" letter-spacing="2">CRIME REPORTING SYSTEM</text>
+  <text x="80" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="500" fill="#64748b" letter-spacing="0.5">REPORT • TRACK • RESPOND</text>
+</svg>

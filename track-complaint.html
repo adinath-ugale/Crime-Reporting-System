@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Complaint Status | Crime Reporting System (CRS)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body style="background-color: var(--color-bg-light);">
+
+  <!-- Official Topbar -->
+  <div class="official-topbar">
+    <div class="container official-topbar-inner">
+      <div class="official-topbar-left">
+        <span class="official-flag-badge">National Citizen Law Enforcement Network • Live Tracking Registry</span>
+      </div>
+      <div class="official-topbar-right">
+        <a href="police-login.html" style="color: #60a5fa; font-weight: 600;">Authorized Police Login &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="crs-header">
+    <div class="container crs-nav-container">
+      <a href="index.html" class="crs-brand">
+        <img src="assets/logos/crs-logo.svg" alt="CRS Emblem" class="crs-brand-img">
+      </a>
+      <nav>
+        <ul class="crs-nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report-crime.html">Report Crime</a></li>
+          <li><a href="track-complaint.html" class="active">Track Complaint</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="crs-nav-actions">
+        <a href="login.html" class="btn btn-sm btn-outline">Citizen Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="py-12">
+    <div class="container container-narrow">
+      <div class="text-center mb-8">
+        <span class="section-tag">Electronic Grievance Tracking</span>
+        <h1 class="section-title">Track Case Investigation</h1>
+        <p class="section-subtitle">
+          Enter your unique complaint identifier (e.g. CRS-2026-10492) to view live stage progression, 
+          assigned investigating officers, and official timestamps.
+        </p>
+      </div>
+
+      <!-- Search Card -->
+      <div class="card card-elevated mb-8">
+        <div class="card-body">
+          <form id="trackSearchForm" class="flex gap-3 flex-wrap">
+            <div class="flex-1" style="min-width: 260px;">
+              <input type="text" id="trackComplaintId" class="form-control font-mono font-bold" placeholder="Enter Complaint ID (e.g. CRS-2026-10492)" style="font-size: 1.1rem; padding: 0.75rem 1rem;" required autofocus>
+            </div>
+            <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1.75rem; font-size: 1rem;">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/></svg>
+              Search Status
+            </button>
+          </form>
+
+          <!-- Sample IDs hint for testing -->
+          <div class="flex items-center gap-2 mt-4 pt-3" style="border-top: 1px solid var(--color-border); font-size: 0.75rem; color: var(--color-slate-muted);">
+            <span class="font-bold">Recent Registered Cases:</span>
+            <button type="button" class="btn btn-sm btn-outline" style="padding: 0.2rem 0.5rem;" onclick="document.getElementById('trackComplaintId').value='CRS-2026-10492'; document.getElementById('trackSearchForm').dispatchEvent(new Event('submit'));">
+              CRS-2026-10492 (Theft)
+            </button>
+            <button type="button" class="btn btn-sm btn-outline" style="padding: 0.2rem 0.5rem;" onclick="document.getElementById('trackComplaintId').value='CRS-2026-10385'; document.getElementById('trackSearchForm').dispatchEvent(new Event('submit'));">
+              CRS-2026-10385 (Resolved)
+            </button>
+            <button type="button" class="btn btn-sm btn-outline" style="padding: 0.2rem 0.5rem;" onclick="document.getElementById('trackComplaintId').value='CRS-2026-10518'; document.getElementById('trackSearchForm').dispatchEvent(new Event('submit'));">
+              CRS-2026-10518 (Submitted)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tracking Results Section -->
+      <div id="trackResultContainer">
+        <!-- Results rendered dynamically by Complaints.initTrackComplaint() -->
+        <div class="card" style="border-style: dashed; background: transparent;">
+          <div class="card-body text-center py-12 text-muted">
+            <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 1rem; color: var(--color-slate-light);"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/></svg>
+            <h4 class="font-bold text-navy">Enter a Complaint ID Above</h4>
+            <p style="font-size: 0.85rem; max-width: 420px; margin: 0.5rem auto 0;">
+              Your Complaint ID was generated and provided on confirmation when you submitted your online grievance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="crs-footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Crime Reporting System (CRS). All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Legal Notice</a>
+        <a href="contact.html">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/complaints.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Complaints.initTrackComplaint();
+    });
+  </script>
+</body>
+</html>

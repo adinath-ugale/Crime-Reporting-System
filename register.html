@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citizen Registration | Crime Reporting System (CRS)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body style="background-color: var(--color-bg-subtle);">
+
+  <!-- Official Topbar -->
+  <div class="official-topbar">
+    <div class="container official-topbar-inner">
+      <div class="official-topbar-left">
+        <span class="official-flag-badge">National Citizen Law Enforcement Network</span>
+      </div>
+      <div class="official-topbar-right">
+        <span>Already have an account?</span>
+        <a href="login.html" style="color: #60a5fa; font-weight: 600;">Citizen Login &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="crs-header">
+    <div class="container crs-nav-container">
+      <a href="index.html" class="crs-brand">
+        <img src="assets/logos/crs-logo.svg" alt="CRS Emblem" class="crs-brand-img">
+      </a>
+      <div class="flex items-center gap-3">
+        <span class="text-muted font-size-sm">Need help?</span>
+        <a href="contact.html" class="btn btn-sm btn-outline">Support Desk</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-12">
+    <div class="container container-narrow">
+      <div class="card card-elevated">
+        <div class="card-header" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: #ffffff;">
+          <div>
+            <span class="badge" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.2);">Citizen Portal</span>
+            <h2 class="card-title text-white mt-1" style="color: #ffffff;">Register Citizen Account</h2>
+            <p style="font-size: 0.85rem; color: #cbd5e1; margin-top: 0.25rem;">
+              Provide authentic contact and address details. Required to lodge electronic complaints.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <form id="citizenRegisterForm" novalidate>
+            <!-- Personal Information -->
+            <h4 class="font-bold text-navy mb-4 pb-2" style="border-bottom: 1px solid var(--color-border);">1. Personal Particulars</h4>
+            
+            <div class="form-group">
+              <label for="fullName" class="form-label required">Full Legal Name</label>
+              <input type="text" id="fullName" class="form-control" placeholder="e.g. Ramesh Kumar Sharma" required>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="form-group">
+                <label for="email" class="form-label required">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+                <small class="form-hint">Used for official status notifications.</small>
+              </div>
+
+              <div class="form-group">
+                <label for="mobile" class="form-label required">Mobile Number</label>
+                <div class="input-group">
+                  <span class="input-group-text">+91</span>
+                  <input type="tel" id="mobile" class="form-control" placeholder="10-digit mobile number" maxlength="10" required>
+                </div>
+                <small class="form-hint">Standard 10-digit Indian mobile number.</small>
+              </div>
+            </div>
+
+            <!-- Password & Security -->
+            <h4 class="font-bold text-navy mt-6 mb-4 pb-2" style="border-bottom: 1px solid var(--color-border);">2. Account Security</h4>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="form-group">
+                <label for="password" class="form-label required">Password</label>
+                <div class="password-input-wrapper">
+                  <input type="password" id="password" class="form-control" placeholder="Min. 8 characters" required>
+                  <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                  </button>
+                </div>
+                <div id="passwordStrengthLabel" class="form-hint">Password strength: Weak</div>
+              </div>
+
+              <div class="form-group">
+                <label for="confirmPassword" class="form-label required">Confirm Password</label>
+                <div class="password-input-wrapper">
+                  <input type="password" id="confirmPassword" class="form-control" placeholder="Re-enter password" required>
+                  <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Address & Jurisdiction -->
+            <h4 class="font-bold text-navy mt-6 mb-4 pb-2" style="border-bottom: 1px solid var(--color-border);">3. Permanent Residential Address</h4>
+
+            <div class="form-group">
+              <label for="address" class="form-label required">Street Address / House No.</label>
+              <textarea id="address" class="form-textarea" style="min-height: 80px;" placeholder="Flat / Building, Street, Landmark" required></textarea>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="form-group">
+                <label for="city" class="form-label required">City / Town</label>
+                <input type="text" id="city" class="form-control" value="Metro City" required>
+              </div>
+
+              <div class="form-group">
+                <label for="district" class="form-label required">District</label>
+                <select id="district" class="form-select" required>
+                  <option value="">-- Select District --</option>
+                  <option value="Central District">Central District</option>
+                  <option value="North District">North District</option>
+                  <option value="South District">South District</option>
+                  <option value="IT Corridor">IT Corridor</option>
+                  <option value="Suburban District">Suburban District</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="form-group">
+                <label for="state" class="form-label required">State</label>
+                <input type="text" id="state" class="form-control" value="Maharashtra" required>
+              </div>
+
+              <div class="form-group">
+                <label for="pincode" class="form-label required">Postal PIN Code</label>
+                <input type="text" id="pincode" class="form-control" placeholder="6-digit PIN code" maxlength="6" required>
+              </div>
+            </div>
+
+            <div class="form-check mt-4">
+              <input type="checkbox" id="termsAccepted" class="form-check-input" required>
+              <label for="termsAccepted" class="form-check-label">
+                I declare that the information provided is true and accurate. I understand that misrepresentation of identity is punishable under law.
+              </label>
+            </div>
+
+            <div class="mt-8">
+              <button type="submit" id="registerSubmitBtn" class="btn btn-lg btn-primary btn-block">
+                Complete Registration
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card-footer justify-center">
+          <span class="text-muted">Already registered on CRS? <a href="login.html" class="font-bold">Log in here</a></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="crs-footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Crime Reporting System (CRS). All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Legal Notice</a>
+        <a href="contact.html">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // If already logged in, redirect
+      if (AuthService.isLoggedIn()) {
+        const current = AuthService.getCurrentUser();
+        AuthService.redirectByRole(current.role);
+        return;
+      }
+
+      const form = document.getElementById('citizenRegisterForm');
+      const passwordInput = document.getElementById('password');
+      const confirmInput = document.getElementById('confirmPassword');
+      const strengthLabel = document.getElementById('passwordStrengthLabel');
+
+      // Real-time password strength meter
+      passwordInput.addEventListener('input', () => {
+        const val = passwordInput.value;
+        const res = Validator.checkPasswordStrength(val);
+        strengthLabel.textContent = `Password strength: ${res.label}`;
+        if (res.label === 'Strong') strengthLabel.style.color = 'var(--color-success)';
+        else if (res.label === 'Moderate') strengthLabel.style.color = 'var(--color-warning)';
+        else strengthLabel.style.color = 'var(--color-emergency)';
+      });
+
+      // Submit Form
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        Validator.clearAllErrors(form);
+
+        const fullName = document.getElementById('fullName');
+        const email = document.getElementById('email');
+        const mobile = document.getElementById('mobile');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const address = document.getElementById('address');
+        const city = document.getElementById('city');
+        const district = document.getElementById('district');
+        const state = document.getElementById('state');
+        const pincode = document.getElementById('pincode');
+        const termsAccepted = document.getElementById('termsAccepted');
+
+        let isValid = true;
+
+        if (!Validator.isRequired(fullName.value)) {
+          Validator.showError(fullName, 'Full name is required.');
+          isValid = false;
+        }
+
+        if (!Validator.isValidEmail(email.value)) {
+          Validator.showError(email, 'Please enter a valid email address.');
+          isValid = false;
+        }
+
+        if (!Validator.isValidMobile(mobile.value)) {
+          Validator.showError(mobile, 'Please enter a valid 10-digit mobile number.');
+          isValid = false;
+        }
+
+        const pwdCheck = Validator.checkPasswordStrength(password.value);
+        if (!pwdCheck.isValid) {
+          Validator.showError(password, 'Password must be at least 6 characters long.');
+          isValid = false;
+        }
+
+        if (password.value !== confirmPassword.value) {
+          Validator.showError(confirmPassword, 'Passwords do not match.');
+          isValid = false;
+        }
+
+        if (!Validator.isRequired(address.value)) {
+          Validator.showError(address, 'Address is required.');
+          isValid = false;
+        }
+
+        if (!Validator.isRequired(district.value)) {
+          Validator.showError(district, 'Please select your district.');
+          isValid = false;
+        }
+
+        if (!Validator.isValidPincode(pincode.value)) {
+          Validator.showError(pincode, 'Please enter a valid 6-digit PIN code.');
+          isValid = false;
+        }
+
+        if (!termsAccepted.checked) {
+          Validator.showError(termsAccepted, 'You must accept the truthfulness declaration.');
+          isValid = false;
+        }
+
+        if (!isValid) return;
+
+        const btn = document.getElementById('registerSubmitBtn');
+        btn.disabled = true;
+        btn.textContent = 'Registering Account...';
+
+        const userData = {
+          fullName: fullName.value,
+          email: email.value,
+          mobile: mobile.value,
+          password: password.value,
+          address: address.value,
+          city: city.value,
+          district: district.value,
+          state: state.value,
+          pincode: pincode.value
+        };
+
+        const res = await AuthService.registerUser(userData);
+
+        if (res.success) {
+          App.showToast('Registration Successful', 'Your citizen account has been created. Redirecting to login...', 'success');
+          setTimeout(() => {
+            window.location.href = 'login.html?registered=true';
+          }, 1200);
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Complete Registration';
+          App.showToast('Registration Error', res.message, 'error');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
