@@ -1,4 +1,4 @@
-# 🚨 Crime Reporting System (CRS)
+#  Crime Reporting System (CRS)
 ### *Report. Track. Respond.*
 
 A complete, production-grade frontend web application for citizen crime reporting, police station investigation management, and executive state law enforcement analytics.
@@ -7,7 +7,7 @@ Built entirely using **HTML5, CSS3, and Vanilla JavaScript** with temporary clie
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 1. [Project Overview](#-project-overview)
 2. [Key Features](#-key-features)
 3. [Technology Stack](#-technology-stack)
@@ -30,7 +30,7 @@ Built entirely using **HTML5, CSS3, and Vanilla JavaScript** with temporary clie
 
 ---
 
-## 🛡️ Project Overview
+## Project Overview
 
 The **Crime Reporting System (CRS)** provides an authentic civic technology portal that brings speed, accountability, and legal transparency to public safety grievance handling.
 
@@ -41,7 +41,7 @@ The **Crime Reporting System (CRS)** provides an authentic civic technology port
 
 ---
 
-## ⚡ Key Features
+##  Key Features
 
 - **Production-Style Civic Design:** Modern civic palette using Deep Navy (`#0f172a`), Royal Blue (`#1d4ed8`), Emergency Red accents (`#dc2626`), Success Green (`#16a34a`), and crisp typography.
 - **Pure Native Execution:** 100% vanilla JavaScript, HTML5, and CSS3. Zero external frameworks, zero npm/Node.js dependencies, zero build scripts. Runs directly in any modern browser.
@@ -60,7 +60,7 @@ The **Crime Reporting System (CRS)** provides an authentic civic technology port
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 | Layer | Technologies Used |
 |---|---|
@@ -73,7 +73,7 @@ The **Crime Reporting System (CRS)** provides an authentic civic technology port
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 
 ```
 crime-reporting-system/
@@ -135,7 +135,7 @@ crime-reporting-system/
 
 ---
 
-## 🚀 How to Run Locally
+##  How to Run Locally
 
 Because the application is built entirely using standard HTML5, CSS3, and JavaScript, **no installation, Node.js, Python, or local server is strictly required**.
 
@@ -152,7 +152,7 @@ You can also serve the files with any lightweight HTTP server:
 
 ---
 
-## 🌐 How to Deploy (GitHub Pages)
+##  How to Deploy (GitHub Pages)
 
 The project is structured with 100% relative paths (`./`, `css/...`, `js/...`, `assets/...`) and does not rely on server-side routing or URL rewriting.
 
@@ -164,7 +164,7 @@ The project is structured with 100% relative paths (`./`, `css/...`, `js/...`, `
 
 ---
 
-## 👥 Application Roles & Access Matrix
+##  Application Roles & Access Matrix
 
 The system provides pre-configured operational system accounts:
 
@@ -179,7 +179,7 @@ The system provides pre-configured operational system accounts:
 
 ---
 
-## 🔄 End-to-End User Workflows
+##  End-to-End User Workflows
 
 ### Citizen Workflow
 1. Navigate to `register.html` and create a citizen profile.
@@ -215,7 +215,7 @@ The system provides pre-configured operational system accounts:
 
 ---
 
-## 💾 Frontend & Data Architecture
+##  Frontend & Data Architecture
 
 All client data access is mediated through `js/storage.js` and abstracted via `js/api.js`.
 
@@ -247,7 +247,7 @@ All client data access is mediated through `js/storage.js` and abstracted via `j
 
 ---
 
-## 🔌 Future PHP & MySQL Integration Guide
+##  Future PHP & MySQL Integration Guide
 
 The frontend was specifically architected with clean separation of concerns. In `js/api.js`, every data operation is exposed as an asynchronous Promise.
 
